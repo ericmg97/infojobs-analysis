@@ -3,6 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Api Keys
+api-key.txt
+
+# Mac OS DS_Store
+.DS_Store
+
 # C extensions
 *.so
 
