@@ -31,6 +31,7 @@ def get_infojobs_datasets(api_key, path='data/'):
     
     # Create the paths to the CSV files
     jobs_dataset_path = os.path.join(path, 'jobs_dataset.csv')
+    province_dataset_path = os.path.join(path, 'province_dataset.csv')
     country_dataset_path = os.path.join(path, 'country_dataset.csv')
     
     # Check if the datasets are already cached
@@ -86,7 +87,7 @@ def get_infojobs_datasets(api_key, path='data/'):
         print('\nThe country dataset is already cached')
     except FileNotFoundError:
         print('\nGetting the country dataset from InfoJobs API...')
-        r = requests.get('https://api.infojobs.net/api/1/dictionary/country', headers=headers, params={'page': 1, 'maxResults': '50'})
+        r = requests.get('https://api.infojobs.net/api/1/dictionary/country', headers=headers)
 
         # Convert the response to JSON and create a the dataset
         df = pd.DataFrame(r.json())
@@ -95,6 +96,21 @@ def get_infojobs_datasets(api_key, path='data/'):
         df.to_csv(country_dataset_path, index=False)
 
         print(f'The dataset has been saved to {country_dataset_path}\n')
+
+    try:
+        df = pd.read_csv(province_dataset_path)
+        print('\nThe province dataset is already cached')
+    except FileNotFoundError:
+        print('\nGetting the province dataset from InfoJobs API...')
+        r = requests.get('https://api.infojobs.net/api/1/dictionary/province', headers=headers)
+
+        # Convert the response to JSON and create a the dataset
+        df = pd.DataFrame(r.json())
+
+        # Save the dataset to a CSV file
+        df.to_csv(province_dataset_path, index=False)
+
+        print(f'The dataset has been saved to {province_dataset_path}\n')
 
 if __name__ == '__main__':
     # Get the private API key
