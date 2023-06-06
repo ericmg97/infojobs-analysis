@@ -2,3 +2,4 @@ urllib3==1.26.6
 requests
 pandas
 tqdm
+jupyterlab
