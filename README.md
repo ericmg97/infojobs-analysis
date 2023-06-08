@@ -40,6 +40,8 @@ pip install -r requirements.txt
 
 4. Download the data from InfoJobs: (optional)
 
+  > If you don't have an InfoJobs account, you can use the pre-downloaded data in the `data` directory.
+
 - In order to download the data, you need to have a developer account in InfoJobs. If you don't have one, you can create it for free in [InfoJobs Developer Site](https://developer.infojobs.net/).
 - Once you have an account, create a file named `api-key.txt` in the root directory of the project, and add your credentials to it:
 
@@ -47,9 +49,7 @@ pip install -r requirements.txt
 echo "YOUR_API_KEY" > api-key.txt
 ```
 
-  > If you don't have an InfoJobs account, you can use the pre-downloaded data in the `data` directory.
-
-1. Open the `analyze-infojobs-offers.ipynb` notebook in JupyterLab, and run the cells in order. The notebook will clean and analyze the data, and create visualizations.
+5. Open the `analyze-infojobs-offers.ipynb` notebook in JupyterLab, and run the cells in order. The notebook will clean and analyze the data, and create visualizations.
 
 ## License
 
