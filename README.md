@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 4. Download the data from InfoJobs: (optional)
 
-- In order to download the data, you need to have a developer account in InfoJobs. If you don't have one, you can create it for free in [InfoJobs Developer Site](https://developer.infojobs.net/).
+- In order to download the data, you need to have a developer account in InfoJobs. If you don't have one, you can create it for free in [InfoJobs Developer Site](https://developer.infojobs.net/){:target="_blank"}.
 - Once you have an account, create a file named `api-key.txt` in the root directory of the project, and add your credentials to it:
 
 ```bash
@@ -57,7 +57,7 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 ## Acknowledgments
 
-This project was created for the Immune Coding Institute's Data Science Master. We would like to thank the following organizations for their resources and support:
+This project was created for the Immune Tecnology Institute's Data Science Master. I would like to thank the following organizations for their resources and support:
 
-- [InfoJobs Developer Site](https://developer.infojobs.net/)
-- [Immune Coding Institute](https://www.immune.institute/)
+- [InfoJobs](https://infojobs.net/){:target="_blank"}
+- [Immune Tecnology Institute](https://www.immune.institute/){:target="_blank"}
