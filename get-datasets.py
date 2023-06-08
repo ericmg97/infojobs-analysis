@@ -3,7 +3,7 @@ import pandas as pd
 import tqdm
 import os
 
-def get_infojobs_datasets(api_key, path='data/'):
+def get_infojobs_datasets(api_key, path):
     """
     Get the jobs dataset from InfoJobs API and save it to a CSV file.
 
@@ -113,9 +113,12 @@ def get_infojobs_datasets(api_key, path='data/'):
         print(f'The dataset has been saved to {province_dataset_path}\n')
 
 if __name__ == '__main__':
+    # Get root directory of the project
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+
     # Get the private API key
-    with open('api-key.txt', 'r') as file:
+    with open(os.path.join(base_dir, 'api-key.txt'), 'r') as file:
         api_key = file.read()
 
     # Get the jobs dataset from InfoJobs API and save it to a CSV file
-    get_infojobs_datasets(api_key)
+    get_infojobs_datasets(api_key, path=os.path.join(base_dir, 'data/'))
