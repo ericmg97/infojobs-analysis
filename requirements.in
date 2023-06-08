@@ -3,3 +3,7 @@ requests
 pandas
 tqdm
 jupyterlab
+matplotlib
+seaborn
+nltk
+wordcloud
