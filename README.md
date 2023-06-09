@@ -1,5 +1,7 @@
 # Analyze InfoJobs Offers
 
+![ ](notebooks/images/image.png)
+
 This project analyzes job offers from InfoJobs, a popular job search website in Spain. The project uses Python and several libraries to clean, analyze, and visualize the data.
 
 ## Requirements
